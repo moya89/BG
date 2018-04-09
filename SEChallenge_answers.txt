@@ -1,0 +1,67 @@
+Question 1:
+-----------
+
+Part A)
+'wallet balance: 23460904'
+'confirmed balance: 23460904'
+
+Part B)
+new address:
+{ address: '2NEqcYQgKFukAnAMn15GNQWwU6hXS9j6mDK',
+  wallet: '2MuECqLd1upKs4mxvTn8en7ewMpxdho9Mrj' }
+
+Part C)
+'wallet label: SE Challenge Wallet'
+
+
+Question 2:
+-----------
+Account created with email moya89@gmail.com. I created 2 wallets, and used both in answering the other questions. The two wallets are: "My BitgGo Wallet" and "BitGo Challenge for Mohammad". The second wallet was created via the sdk as per the instructions in question 3.
+
+Question 3:
+-----------
+
+Part A)
+Generated the "BitGo Challenge for Mohammad" wallet via the SDK (please see provided script).
+
+Part B)
+Sending .1 TBTC (BitGo test account did not have a full TBTC). Portion of console output below, transaction carried out in the script.
+{ status: 'accepted',
+  tx: '01000000000101a824142b74a0d4f7118ca3bf27565c4244a0ad9416fcfa6053b0638b5cdf497300000000232200208187581b4ddced4702cf764af0f941fe68bb0a1b2bdf3d69d6ca25f84b551e60ffffffff021d63cd000000000017a9147a073280e88d8fcd8c9ae4d376efd64048c9ec2987809698000000000017a914d3f89f5d1e43240dffc827febf4ee583165764e18704004730440220561dfde9701f1e33e6a8d7f785f89f8672279f7f64fe342fe1a9896786bea67402201d87b4a3e8c545b51574542cea9ad26ec15c111afe61751646f2917e3ceb5a100148304502210080a77a036fb49dafcf64c4fc006531b9d93adb4921348a8485b08a05c476186b02205db6757d4814c1e7d2a618c7454406eaf66a39c9ddcb9ccf5e0d1fbc8c3dbc0c0169522103321f06d1f8883aa670eb45ad339e66ed69dae97237929aa84582fcf71581fe492103750f1fa33f09bb6dd65571f818b58e4aeb5c90f77aae0a7bd4d941cabea326c92102119302f435795387adb93d513896669072838cdd6a5193a764440915ac28d77453ae00000000',
+  hash: '57e26c8a39483589691e87086e8792034675c6f2d54b1178e7752bf8d3783dfd',
+  instant: false,
+  instantId: undefined,
+  fee: 651,
+  feeRate: 3000,
+  travelInfos: [] }
+
+
+Part C)
+Transaction ID and fee below. This is for walled ID: 2NCUWBchyuReuK7m8HwKMqRr46dEkbuprjJ
+
+    "transactions": [
+        {
+            "id": "c74e65465d752475aaa124a194883c9d612135aef892f2ba99034fadd96ea67c",
+            "date": "2018-04-09T04:22:37.446Z",
+            "fee": 651,
+
+Part D)
+Webhook set with script. Console output below, followed by POST JSON.
+
+{ id: '5acb07bf19a1305f07d67cd43d6dde8c',
+  created: '2018-04-09T06:27:11.727Z',
+  walletId: '2NC8sjM8o6Lpg47JNuTrVkMX5R81yrb6iRK',
+  coin: 'bitcoin',
+  type: 'transaction',
+  url: 'https://webhook.site/8362e7eb-e6b1-49d4-b78f-9cccf5e4331e',
+  version: 1,
+  state: 'active',
+  successiveFailedAttempts: 0 }
+
+POST
+{
+  "hash": "d752afeeffa9db0546c36854cc490d2a89dce98598f3ce690cebbc98489e66f1",
+  "type": "transaction",
+  "coin": "bitcoin",
+  "walletId": "2NC8sjM8o6Lpg47JNuTrVkMX5R81yrb6iRK"
+}
